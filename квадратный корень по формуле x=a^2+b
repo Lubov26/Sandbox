@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+//метод получения корня: x=a^2+b sqrt(x)=a+(b/(2*a))
+
+int main()
+{
+    float x,a,b,y;
+  
+    
+    cout<<"введите натуральное число"<<endl;
+    cin>>x;
+    
+         for (a=1; (a*a)<x; ) 
+        {
+            a++;
+        } 
+    
+    
+        a=--a; //нахожу а
+    
+        b=x-a*a; //нахожу b
+    
+        y=a+(b/(2*a)); //вычисляю корень по формуле*/
+        
+    
+    cout<<"корень примерно равен "<< y;
+
+    return 0;
+}
