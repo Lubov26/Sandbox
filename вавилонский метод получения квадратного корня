@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+//вавилонский метод получения корня: x=(a+b)^2 b=(x-a^2)/2a
+//                                   a+b=0.5*(x/a+a)
+
+int main()
+{
+   float x,a,y;
+    int n;
+    
+    cout<<"введите натуральное число"<<endl;
+    cin>>x;
+    
+    cout<<"введите точность"<<endl;
+    cin>>n;
+    
+    for (a=1; (a*a)<x; ) 
+    {
+        a++;
+    } 
+    
+    a=--a; //нахожу а
+    
+    
+    for (int i=1; i<n; i++)
+     {
+        y=0.5*(x/a+a); //вычисляю корень по формуле*/
+        
+        a=y;
+     }
+    
+    cout<<"корень примерно равен "<< y;
+
+    return 0;
+}
